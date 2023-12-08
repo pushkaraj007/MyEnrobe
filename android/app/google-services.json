@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "470402427731",
+    "project_id": "trier-99986",
+    "storage_bucket": "trier-99986.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:470402427731:android:a7f23a44d17b24ea0ecfa6",
+        "android_client_info": {
+          "package_name": "com.example.trier"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "470402427731-hfaeltu0tte0b8rof60irh890f0kvg6m.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.trier",
+            "certificate_hash": "2befd3379d3a31d1e841f8429c8fe3e62d4a567d"
+          }
+        },
+        {
+          "client_id": "470402427731-9t5e3mde1jr9qlu8p25qkb3jk58d3fli.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDZ1OILyjVhJpD0zGxE5erA80cSrhmHa0w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "470402427731-9t5e3mde1jr9qlu8p25qkb3jk58d3fli.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
