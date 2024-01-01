@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:trier/screens/product_info_page.dart';
+import 'package:trier/screens/product_list.dart';
 
 class ClothesCategoryScreen extends StatelessWidget {
   ClothesCategoryScreen({Key? key}) : super(key: key);
 
   // Dummy data for clothes categories
   final List<Map<String, dynamic>> clothesCategories = [
-    {'name': 'T-Shirts', 'image': 'https://thehouseofrare.com/cdn/shop/products/IMG_0053_5c650849-9d9d-4cc3-8863-6a23778cd9a0.jpg?v=1675170808'},
+    {'name': 'T-shirts', 'image': 'https://thehouseofrare.com/cdn/shop/products/IMG_0053_5c650849-9d9d-4cc3-8863-6a23778cd9a0.jpg?v=1675170808'},
     {'name': 'Jeans', 'image': 'https://images.pexels.com/photos/603022/pexels-photo-603022.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500'},
     {'name': 'Dresses', 'image':'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZ8boeFXYr6B-gdEZD8uFyPglicR_EtBeAMA&usqp=CAU'},
     {'name': 'Jackets', 'image': 'https://images.pexels.com/photos/7679656/pexels-photo-7679656.jpeg?cs=srgb&dl=pexels-mart-production-7679656.jpg&fm=jpg'},
@@ -14,7 +14,6 @@ class ClothesCategoryScreen extends StatelessWidget {
     {'name': 'Accessories', 'image': 'https://images.pexels.com/photos/18533675/pexels-photo-18533675.jpeg?cs=srgb&dl=pexels-tien-nguyen-18533675.jpg&fm=jpg'},
     {'name': 'Coats', 'image': 'https://images.pexels.com/photos/6532339/pexels-photo-6532339.jpeg?cs=srgb&dl=pexels-cottonbro-studio-6532339.jpg&fm=jpg'},
     {'name': 'Activewear', 'image': 'https://images.pexels.com/photos/416778/pexels-photo-416778.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500'},
-    // Add more categories with images
   ];
 
   @override
@@ -49,11 +48,12 @@ class ClothesCategoryScreen extends StatelessWidget {
       child: InkWell(
         onTap: () {
           // Navigate to the ProductPage with the selected category
+          // Navigate to the ProductPage with the selected category
           Navigator.push(
-            context,
-            MaterialPageRoute(
-              builder: (context) => ProductPage(productId: 'rR4xZFMD033420vOwM4R'),
-            ),
+              context,
+              MaterialPageRoute(
+                builder: (context) => ProductListScreen(category: category),
+          )
           );
 
         },

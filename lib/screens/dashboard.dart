@@ -103,14 +103,14 @@ class _DashboardScreenState extends State<DashboardScreen> {
                 await _signOut();
                 Navigator.pushAndRemoveUntil(
                   context,
-                  MaterialPageRoute(builder: (context) => LoginScreen()),
+                  MaterialPageRoute(builder: (context) => const LoginScreen()),
                       (route) => false,
                 );
               },
             ),
           ],
         ),
-        body: ShoppingDashboard(),
+        body: const ShoppingDashboard(),
       ),
     );
   }
@@ -127,9 +127,9 @@ class _ShoppingDashboardState extends State<ShoppingDashboard> {
   int _currentIndex = 0;
 
   final List<Widget> _pages = [
-    HomeScreen(),
-    SearchScreen(),
-    const LikesScreen(),
+    const HomeScreen(),
+    const SearchScreen(),
+    const AddProductPage(),
     const ProfileScreen(),
   ];
 

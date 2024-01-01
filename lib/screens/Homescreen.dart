@@ -1,9 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
-import 'package:trier/screens/AvatarScreen.dart';
 import 'package:trier/screens/categoryscreen.dart';
 
-class HomeScreen extends StatelessWidget {
+import 'AvatarScreen.dart';
+import 'avatarhome.dart';
+
+class HomeScreen extends StatefulWidget {
+  const HomeScreen({Key? key}) : super(key: key);
+
+  @override
+  _HomeScreenState createState() => _HomeScreenState();
+}
+
+class _HomeScreenState extends State<HomeScreen> {
   List<String> bannerImages = [
     'images/shoppics.png',
     'images/banner2.jpg',
@@ -17,17 +26,32 @@ class HomeScreen extends StatelessWidget {
     // 'images/deal3.jpg',
     // Add more deal images as needed
   ];
+
   List<String> pose = [
-    'images/pose.png',
+    'images/avatar.png',
     // 'images/bggg.jpg',
     // 'images/deal3.jpg',
     // Add more deal images as needed
   ];
 
-  HomeScreen({super.key});
+  late String searchQuery;
+  TextEditingController _searchController = TextEditingController();
+
+  @override
+  void initState() {
+    super.initState();
+    searchQuery = '';
+  }
+
+  List<String> getFilteredProducts(List<String> products, String query) {
+    return products
+        .where((product) => product.toLowerCase().contains(query.toLowerCase()))
+        .toList();
+  }
 
   @override
   Widget build(BuildContext context) {
+
     return Scaffold(
       body: SingleChildScrollView(
         child: Column(
@@ -37,6 +61,12 @@ class HomeScreen extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.all(16.0),
               child: TextField(
+                controller: _searchController,
+                onChanged: (query) {
+                  setState(() {
+                    searchQuery = query;
+                  });
+                },
                 decoration: InputDecoration(
                   hintText: 'Search...',
                   prefixIcon: const Icon(Icons.search),
@@ -181,7 +211,7 @@ class HomeScreen extends StatelessWidget {
                       // Navigate to another page
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => const CreateAvatarScreen()),
+                        MaterialPageRoute(builder: (context) =>  AvatarHomeScreen()),
                       );
                     },
                     child: const Row(
