@@ -7,8 +7,6 @@ import 'package:firebase_storage/firebase_storage.dart' as firebase_storage;
 import 'package:firebase_core/firebase_core.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:trier/utils/instructionscreen.dart';
-
-import '../utils/cameracapturescreen.dart';
 //
 // class CameraCaptureScreen extends StatefulWidget {
 //   late final CameraController cameraController;

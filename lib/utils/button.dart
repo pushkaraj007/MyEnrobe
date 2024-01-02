@@ -36,9 +36,12 @@ class CustomButton extends StatelessWidget {
           elevation: 0,
         ),
         onPressed: onPressed,
-        child: Text(
-          text,
-          style: TextStyle(fontSize: 18, color: Colors.black54),
+        child: Center(
+          child: Text(
+            text,
+            textAlign: TextAlign.center,
+            style: TextStyle(fontSize: 18, color: Colors.black54),
+          ),
         ),
       ),
     );

@@ -428,158 +428,190 @@ class _LoginScreenState extends State<LoginScreen> {
       body: Stack(
         children: [
           Align(
-            alignment: Alignment.center,
-            child: Container(
-              decoration: const BoxDecoration(
-                image: DecorationImage(
-                  image: AssetImage('images/5247.jpg'),
-                  fit: BoxFit.cover,
-                ),
-              ),
-              child: Center(
-                child: BackdropFilter(
-                  filter: ImageFilter.blur(sigmaX: 0, sigmaY: 0),
-                  child: Container(
-                    decoration: const BoxDecoration(
-                      // color: Colors.black.withOpacity(0.1),
+              alignment: Alignment.center,
+              child: Container(
+                  decoration: const BoxDecoration(
+                    image: DecorationImage(
+                      image: AssetImage('images/5247.jpg'),
+                      fit: BoxFit.cover,
                     ),
-                    child: Center(
-                      child: SingleChildScrollView(
-                        child: Padding(
-                          padding: const EdgeInsets.fromLTRB(16, 10, 16, 10),
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Image.asset(
-                                'images/My Enrobe-logos_black.png',
-                                height: 160.0,
-                                width: 3000,
-                                fit: BoxFit.fitWidth,
-                              ),
-                              const SizedBox(height: 0),
-                              Form(
-                                key: _formKey,
-                                child: Padding(
-                                  padding: const EdgeInsets.fromLTRB(10, 10, 10, 10),
-                                  child: Column(
-                                    children: [
-                                      Container(
-                                          color: Colors.white60, // Set your desired background color
-                                          child: TextFormField(
-                                        decoration: const InputDecoration(
-                                          labelText: 'Username',
-                                          border: OutlineInputBorder(),
-                                          labelStyle: TextStyle(
-                                            fontWeight: FontWeight.bold,
-                                          ),
-                                          contentPadding: EdgeInsets.symmetric(
-                                              vertical: 18.0, horizontal: 16.0),
-                                        ),
-                                        validator: (value) {
-                                          if (value!.isEmpty) {
-                                            return 'Please enter your username';
-                                          }
-                                          return null;
-                                        },
-                                        onSaved: (value) {
-                                          _username = value!;
-                                        },
-                                      ),
-                                      ),
-                                      const SizedBox(height: 16),
-                                    Container(
-                                        color: Colors.white60,
-                                      child: TextFormField(
-                                        decoration: const InputDecoration(
-                                          labelText: 'Password',
-                                          border: OutlineInputBorder(),
-                                          labelStyle: TextStyle(
-                                            fontWeight: FontWeight.bold,
-                                          ),
-                                        ),
-                                        obscureText: true,
-                                        validator: (value) {
-                                          if (value!.isEmpty) {
-                                            return 'Please enter your password';
-                                          }
-                                          return null;
-                                        },
-                                        onSaved: (value) {
-                                          _password = value!;
-                                        },
-                                      ),
+                  ),
+                  child: Center(
+                    child: BackdropFilter(
+                      filter: ImageFilter.blur(sigmaX: 0, sigmaY: 0),
+                      child: Container(
+                        decoration: const BoxDecoration(
+                            // color: Colors.black.withOpacity(0.1),
+                            ),
+                        child: Center(
+                          child: SingleChildScrollView(
+                            child: Padding(
+                              padding:
+                                  const EdgeInsets.fromLTRB(16, 10, 16, 10),
+                              child: Column(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Image.asset(
+                                      'images/My Enrobe-logos_black.png',
+                                      height: 160.0,
+                                      width: 3000,
+                                      fit: BoxFit.fitWidth,
                                     ),
-                                      const SizedBox(height: 25.0),
-                                      AnimatedLoginButton(
-                                        onPressed: _login,
-                                        shouldAnimate: _loginSuccess,
-                                      ),
-                                      const SizedBox(height: 15),
-                                      ElevatedButton(
-                                        onPressed: _login,
-                                        style: ElevatedButton.styleFrom(
-                                          backgroundColor: Colors.white, // Change to the desired color
-                                        ),
-                                        child: Row(
-                                          mainAxisSize: MainAxisSize.min,
+                                    const SizedBox(height: 0),
+                                    Form(
+                                      key: _formKey,
+                                      child: Padding(
+                                        padding: const EdgeInsets.fromLTRB(
+                                            10, 10, 10, 10),
+                                        child: Column(
                                           children: [
-                                            Image.asset(
-                                              'images/google.png',
-                                              height: 20.0,
-                                              width: 20.0,
-                                              fit: BoxFit.cover,
+                                            Container(
+                                              color: Colors
+                                                  .white60, // Set your desired background color
+                                              child: TextFormField(
+                                                decoration:
+                                                    const InputDecoration(
+                                                  labelText: 'Username',
+                                                  border: OutlineInputBorder(),
+                                                  labelStyle: TextStyle(
+                                                    fontWeight: FontWeight.bold,
+                                                  ),
+                                                  contentPadding:
+                                                      EdgeInsets.symmetric(
+                                                          vertical: 18.0,
+                                                          horizontal: 16.0),
+                                                ),
+                                                validator: (value) {
+                                                  if (value!.isEmpty) {
+                                                    return 'Please enter your username';
+                                                  }
+                                                  return null;
+                                                },
+                                                onSaved: (value) {
+                                                  _username = value!;
+                                                },
+                                              ),
                                             ),
-                                            const SizedBox(width: 10),
-                                            const Text('Sign in with Google'),
+                                            const SizedBox(height: 16),
+                                            Container(
+                                              color: Colors.white60,
+                                              child: TextFormField(
+                                                decoration:
+                                                    const InputDecoration(
+                                                  labelText: 'Password',
+                                                  border: OutlineInputBorder(),
+                                                  labelStyle: TextStyle(
+                                                    fontWeight: FontWeight.bold,
+                                                  ),
+                                                ),
+                                                obscureText: true,
+                                                validator: (value) {
+                                                  if (value!.isEmpty) {
+                                                    return 'Please enter your password';
+                                                  }
+                                                  return null;
+                                                },
+                                                onSaved: (value) {
+                                                  _password = value!;
+                                                },
+                                              ),
+                                            ),
+                                            const SizedBox(height: 25.0),
+                                            AnimatedLoginButton(
+                                              onPressed: _login,
+                                              shouldAnimate: _loginSuccess,
+                                            ),
+                                            const SizedBox(height: 15),
+                                            ElevatedButton(
+                                              onPressed: _login,
+                                              style: ElevatedButton.styleFrom(
+                                                backgroundColor: Colors
+                                                    .white, // Change to the desired color
+                                              ),
+                                              child: Row(
+                                                mainAxisSize: MainAxisSize.min,
+                                                children: [
+                                                  Image.asset(
+                                                    'images/google.png',
+                                                    height: 20.0,
+                                                    width: 20.0,
+                                                    fit: BoxFit.cover,
+                                                  ),
+                                                  const SizedBox(width: 10),
+                                                  const Text(
+                                                      'Sign in with Google'),
+                                                ],
+                                              ),
+                                            ),
+                                            const SizedBox(
+                                                height:
+                                                    16), // Add spacing between Google and Forgot Password
+
+                                            Row(
+                                              mainAxisAlignment: MainAxisAlignment.center,
+                                              crossAxisAlignment: CrossAxisAlignment.start,
+                                              children: [
+                                                Expanded(
+                                                  child: ElevatedButton(
+                                                    onPressed: () {
+                                                      Navigator.push(
+                                                        context,
+                                                        MaterialPageRoute(builder: (context) => const ResetPasswordScreen()),
+                                                      );
+                                                    },
+                                                    style: ElevatedButton.styleFrom(
+                                                      primary: Colors.white,
+                                                      elevation: 0,
+                                                    ),
+                                                    child: Text(
+                                                      'Forgot Password?',
+                                                      style: TextStyle(fontSize: 13, color: Colors.black),
+                                                      overflow: TextOverflow.ellipsis,
+
+                                                    ),
+                                                  ),
+                                                ),
+                                                const SizedBox(width: 16),
+                                                Expanded(
+                                                  child: ElevatedButton(
+                                                    onPressed: () {
+                                                      Navigator.push(
+                                                        context,
+                                                        MaterialPageRoute(builder: (context) => const SignupScreen()),
+                                                      );
+                                                    },
+                                                    style: ElevatedButton.styleFrom(
+                                                      primary: Colors.white,
+                                                      elevation: 0,
+                                                    ),
+                                                    child: Text(
+                                                      'Sign Up!',
+                                                      style: TextStyle(fontSize: 16, color: Colors.black),
+                                                    ),
+                                                  ),
+                                                ),
+                                              ],
+                                            ),
+
+                                            if (_errorMessage.isNotEmpty)
+                                              Text(
+                                                _errorMessage,
+                                                style: const TextStyle(
+                                                  color: Colors.red,
+                                                  fontSize: 16.0,
+                                                ),
+                                              ),
                                           ],
                                         ),
                                       ),
-                                      const SizedBox(height: 30),
-                                      CustomButton(
-                                        onPressed: () {
-                                          Navigator.push(
-                                            context,
-                                            MaterialPageRoute(builder: (context) => const ResetPasswordScreen()),
-                                          );
-                                        },
-                                        text: 'Forgot Password?',
-                                        width: 200.0,
-                                        height: 35.0,
-                                      ),
-                                      const SizedBox(height: 16),
-                                      CustomButton(
-                                        onPressed: () {
-                                          Navigator.push(
-                                            context,
-                                            MaterialPageRoute(builder: (context) => const SignupScreen()),
-                                          );
-                                        },
-                                        text: "Don't have an account? Sign Up!",
-                                        width: 350.0,
-                                        height: 40.0,
-                                      ),
-                                      if (_errorMessage.isNotEmpty)
-                                        Text(
-                                          _errorMessage,
-                                          style: const TextStyle(
-                                            color: Colors.red,
-                                            fontSize: 16.0,
-                                          ),
-                                        ),
-                                    ],
-                                  ),
-                                ),
-                              ),
-                            ],
+                                    ),
+                                  ]),
+                            ),
                           ),
                         ),
                       ),
                     ),
-                  ),
-                ),
-              ),
-            ),
-          ),
+                  )))
         ],
       ),
     );
