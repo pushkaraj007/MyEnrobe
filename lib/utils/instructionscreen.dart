@@ -29,7 +29,7 @@ class _InstructionsScreenState extends State<InstructionsScreen> {
   int _currentPage = 0;
 
   List<Widget> _instructionPages = [
-    InstructionPage(text: 'Follow instruction 1...'),
+    InstructionPage(text: 'Stand '),
     InstructionPage(text: 'Follow instruction 2...'),
     // Add more instruction pages as needed
   ];
