@@ -6,7 +6,7 @@ import 'package:trier/screens/profile.dart';
 import 'package:trier/screens/searchscreen.dart';
 import 'Homescreen.dart';
 import 'favourites.dart';
-import 'login_page.dart';
+import '../login&signin/login_page.dart';
 
 class DashboardScreen extends StatefulWidget {
   const DashboardScreen({super.key});

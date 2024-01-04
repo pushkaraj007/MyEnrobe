@@ -27,18 +27,18 @@ class _MyProfileScreenState extends State<MyProfileScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('My Profile'),
+        title: const Text('My Profile'),
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            Text(
+            const Text(
               'My Avatars',
-              style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+              style: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
             ),
-            SizedBox(height: 20.0),
+            const SizedBox(height: 20.0),
             Expanded(
               child: FutureBuilder<DocumentSnapshot>(
                 future: FirebaseFirestore.instance.collection('users').doc(_userId).get(),
@@ -53,7 +53,7 @@ class _MyProfileScreenState extends State<MyProfileScreen> {
                     if (userData != null && userData.containsKey('avatarUrl')) {
                       String imageUrl = userData['avatarUrl'] as String;
                       return GridView.builder(
-                        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                        gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                           crossAxisCount: 2,
                           crossAxisSpacing: 16.0,
                           mainAxisSpacing: 16.0,
@@ -80,7 +80,7 @@ class _MyProfileScreenState extends State<MyProfileScreen> {
                     } else if (_selectedImage != null && File(_selectedImage!.path).existsSync()) {
                       // Display the selected image
                       return GridView.builder(
-                        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                        gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                           crossAxisCount: 2,
                           crossAxisSpacing: 16.0,
                           mainAxisSpacing: 16.0,

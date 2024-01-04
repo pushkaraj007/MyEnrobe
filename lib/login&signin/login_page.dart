@@ -284,11 +284,11 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 // import 'package:google_sign_in/google_sign_in.dart';
-import 'package:trier/screens/reset.dart';
-import 'package:trier/screens/signup_page.dart';
+import 'package:trier/login&signin/reset.dart';
+import 'package:trier/login&signin/signup_page.dart';
 import '../utils/animationlogin.dart';
 import '../utils/button.dart';
-import 'dashboard.dart';
+import '../screens/dashboard.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});

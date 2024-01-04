@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:trier/screens/categoryscreen.dart';
 
-import 'AvatarScreen.dart';
-import 'avatarhome.dart';
+import 'avatars/AvatarScreen.dart';
+import 'avatars/avatarhome.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
