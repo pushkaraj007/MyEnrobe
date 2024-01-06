@@ -4,6 +4,8 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'dart:io';
 class MyProfileScreen extends StatefulWidget {
+  const MyProfileScreen({super.key});
+
   @override
   _MyProfileScreenState createState() => _MyProfileScreenState();
 }

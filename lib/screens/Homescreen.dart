@@ -211,7 +211,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       // Navigate to another page
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) =>  AvatarHomeScreen()),
+                        MaterialPageRoute(builder: (context) =>  const AvatarHomeScreen()),
                       );
                     },
                     child: const Row(
@@ -256,7 +256,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => AvatarHomeScreen(),
+                            builder: (context) => const AvatarHomeScreen(),
                           ),
                         );
                       },

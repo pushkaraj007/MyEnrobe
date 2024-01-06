@@ -287,7 +287,6 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:trier/login&signin/reset.dart';
 import 'package:trier/login&signin/signup_page.dart';
 import '../utils/animationlogin.dart';
-import '../utils/button.dart';
 import '../screens/dashboard.dart';
 
 class LoginScreen extends StatefulWidget {
@@ -337,7 +336,7 @@ class _LoginScreenState extends State<LoginScreen> {
             // Login successful
             Navigator.push(
               context,
-              MaterialPageRoute(builder: (context) => DashboardScreen()),
+              MaterialPageRoute(builder: (context) => const DashboardScreen()),
             );
             setState(() {
               _loginSuccess = true;
@@ -560,10 +559,10 @@ class _LoginScreenState extends State<LoginScreen> {
                                                       );
                                                     },
                                                     style: ElevatedButton.styleFrom(
-                                                      primary: Colors.white,
+                                                      backgroundColor: Colors.white,
                                                       elevation: 0,
                                                     ),
-                                                    child: Text(
+                                                    child: const Text(
                                                       'Forgot Password?',
                                                       style: TextStyle(fontSize: 13, color: Colors.black),
                                                       overflow: TextOverflow.ellipsis,
@@ -581,10 +580,10 @@ class _LoginScreenState extends State<LoginScreen> {
                                                       );
                                                     },
                                                     style: ElevatedButton.styleFrom(
-                                                      primary: Colors.white,
+                                                      backgroundColor: Colors.white,
                                                       elevation: 0,
                                                     ),
-                                                    child: Text(
+                                                    child: const Text(
                                                       'Sign Up!',
                                                       style: TextStyle(fontSize: 16, color: Colors.black),
                                                     ),

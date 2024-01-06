@@ -4,7 +4,6 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:firebase_storage/firebase_storage.dart' as firebase_storage;
-import 'package:firebase_core/firebase_core.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 
 class CameraCaptureScreen extends StatefulWidget {
@@ -34,7 +33,7 @@ class _CameraCaptureScreenState extends State<CameraCaptureScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Capture Image'),
+        title: const Text('Capture Image'),
       ),
       body: Column(
         children: [
@@ -62,7 +61,7 @@ class _CameraCaptureScreenState extends State<CameraCaptureScreen> {
 
   Widget _buildOptionsBar() {
     return Container(
-      padding: EdgeInsets.all(16.0),
+      padding: const EdgeInsets.all(16.0),
       color: Colors.black,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -95,10 +94,10 @@ class _CameraCaptureScreenState extends State<CameraCaptureScreen> {
           onPressed: onPressed,
           color: Colors.white,
         ),
-        SizedBox(height: 8.0),
+        const SizedBox(height: 8.0),
         Text(
           label,
-          style: TextStyle(color: Colors.white),
+          style: const TextStyle(color: Colors.white),
         ),
       ],
     );
@@ -188,14 +187,14 @@ class _CameraCaptureScreenState extends State<CameraCaptureScreen> {
       context: context,
       builder: (BuildContext context) {
         return AlertDialog(
-          title: Text('Image Uploaded'),
-          content: Text('Your image has been successfully uploaded!'),
+          title: const Text('Image Uploaded'),
+          content: const Text('Your image has been successfully uploaded!'),
           actions: [
             TextButton(
               onPressed: () {
                 Navigator.of(context).pop();
               },
-              child: Text('OK'),
+              child: const Text('OK'),
             ),
           ],
         );

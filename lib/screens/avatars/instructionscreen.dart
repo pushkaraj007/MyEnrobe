@@ -43,7 +43,7 @@ class _InstructionsScreenState extends State<InstructionsScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Instructions'),
+        title: const Text('Instructions'),
       ),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -61,12 +61,12 @@ class _InstructionsScreenState extends State<InstructionsScreen> {
           ),
           // Next Button
           Container(
-            padding: EdgeInsets.all(16.0),
+            padding: const EdgeInsets.all(16.0),
             child: ElevatedButton(
               onPressed: () {
                 if (_currentPage < _instructionPages.length - 1) {
                   _pageController.nextPage(
-                    duration: Duration(milliseconds: 500),
+                    duration: const Duration(milliseconds: 500),
                     curve: Curves.easeInOut,
                   );
                 } else {
@@ -83,8 +83,8 @@ class _InstructionsScreenState extends State<InstructionsScreen> {
               },
               child: Text(_currentPage == _instructionPages.length - 1 ? 'Start' : 'Next'),
               style: ElevatedButton.styleFrom(
-                primary: Colors.blue, // Customize button color
-                textStyle: TextStyle(fontSize: 20.0), // Customize text style
+                backgroundColor: Colors.blue, // Customize button color
+                textStyle: const TextStyle(fontSize: 20.0), // Customize text style
               ),
             ),
           ),
@@ -109,13 +109,13 @@ class InstructionPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.all(16.0),
+      padding: const EdgeInsets.all(16.0),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Text(
             text,
-            style: TextStyle(fontSize: 20.0),
+            style: const TextStyle(fontSize: 20.0),
           ),
         ],
       ),

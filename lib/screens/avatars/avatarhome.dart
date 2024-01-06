@@ -7,6 +7,8 @@ import 'dart:io';
 
 import 'Avatarprofilescreen.dart';
 class AvatarHomeScreen extends StatefulWidget {
+  const AvatarHomeScreen({super.key});
+
   @override
   _AvatarHomeScreenState createState() => _AvatarHomeScreenState();
 }
@@ -30,10 +32,10 @@ class _AvatarHomeScreenState extends State<AvatarHomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Avatar Home'),
+        title: const Text('Avatar Home'),
       ),
       body: ListView(
-        padding: EdgeInsets.only(top: 100.0), // Adjust the top padding as needed
+        padding: const EdgeInsets.only(top: 100.0), // Adjust the top padding as needed
         children: [
           Column(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -57,14 +59,14 @@ class _AvatarHomeScreenState extends State<AvatarHomeScreen> {
                               Column(
                                 children: [
                                   Container(
-                                    padding: EdgeInsets.only(top: 20.0, bottom: 20.0),
-                                    decoration: BoxDecoration(
+                                    padding: const EdgeInsets.only(top: 20.0, bottom: 20.0),
+                                    decoration: const BoxDecoration(
                                       border: Border(top: BorderSide(), bottom: BorderSide(),),
                                     ),
                                     child: Column(
                                       children: [
                                         AvatarContainer(imageUrl: imageUrl),
-                                        Text('Product Example'),
+                                        const Text('Product Example'),
                                       ],
                                     ),
                                   ),
@@ -73,14 +75,14 @@ class _AvatarHomeScreenState extends State<AvatarHomeScreen> {
                               Column(
                                 children: [
                                   Container(
-                                    padding: EdgeInsets.only(top: 20.0, bottom: 20.0),
-                                    decoration: BoxDecoration(
+                                    padding: const EdgeInsets.only(top: 20.0, bottom: 20.0),
+                                    decoration: const BoxDecoration(
                                       border: Border(top: BorderSide(), bottom: BorderSide()),
                                     ),
                                     child: Column(
                                       children: [
                                         AvatarContainer(imageUrl: imageUrl),
-                                        Text('Actual Avatar'),
+                                        const Text('Actual Avatar'),
                                       ],
                                     ),
                                   ),
@@ -89,14 +91,14 @@ class _AvatarHomeScreenState extends State<AvatarHomeScreen> {
                               Column(
                                 children: [
                                   Container(
-                                    padding: EdgeInsets.only(top: 20.0, bottom: 20.0),
-                                    decoration: BoxDecoration(
+                                    padding: const EdgeInsets.only(top: 20.0, bottom: 20.0),
+                                    decoration: const BoxDecoration(
                                       border: Border(top: BorderSide(), bottom: BorderSide()),
                                     ),
                                     child: Column(
                                       children: [
                                         AvatarContainer(imageUrl: imageUrl),
-                                        Text('Try on Pic'),
+                                        const Text('Try on Pic'),
                                       ],
                                     ),
                                   ),
@@ -116,14 +118,14 @@ class _AvatarHomeScreenState extends State<AvatarHomeScreen> {
                               Column(
                                 children: [
                                   Container(
-                                    padding: EdgeInsets.only(top: 20.0, bottom: 20.0),
-                                    decoration: BoxDecoration(
+                                    padding: const EdgeInsets.only(top: 20.0, bottom: 20.0),
+                                    decoration: const BoxDecoration(
                                       border: Border(top: BorderSide(), bottom: BorderSide()),
                                     ),
                                     child: Column(
                                       children: [
                                         AvatarContainer(imageUrl: _selectedImage!.path),
-                                        Text('Avatar 1'),
+                                        const Text('Avatar 1'),
                                       ],
                                     ),
                                   ),
@@ -132,14 +134,14 @@ class _AvatarHomeScreenState extends State<AvatarHomeScreen> {
                               Column(
                                 children: [
                                   Container(
-                                    padding: EdgeInsets.only(top: 20.0, bottom: 20.0),
-                                    decoration: BoxDecoration(
+                                    padding: const EdgeInsets.only(top: 20.0, bottom: 20.0),
+                                    decoration: const BoxDecoration(
                                       border: Border(top: BorderSide(), bottom: BorderSide()),
                                     ),
                                     child: Column(
                                       children: [
                                         AvatarContainer(imageUrl: _selectedImage!.path),
-                                        Text('Avatar 2'),
+                                        const Text('Avatar 2'),
                                       ],
                                     ),
                                   ),
@@ -148,14 +150,14 @@ class _AvatarHomeScreenState extends State<AvatarHomeScreen> {
                               Column(
                                 children: [
                                   Container(
-                                    padding: EdgeInsets.only(top: 20.0, bottom: 20.0),
-                                    decoration: BoxDecoration(
+                                    padding: const EdgeInsets.only(top: 20.0, bottom: 20.0),
+                                    decoration: const BoxDecoration(
                                       border: Border(top: BorderSide(), bottom: BorderSide()),
                                     ),
                                     child: Column(
                                       children: [
                                         AvatarContainer(imageUrl: _selectedImage!.path),
-                                        Text('Avatar 3'),
+                                        const Text('Avatar 3'),
                                       ],
                                     ),
                                   ),
@@ -171,7 +173,7 @@ class _AvatarHomeScreenState extends State<AvatarHomeScreen> {
                   }
                 },
               ),
-              SizedBox(height: 60.0),
+              const SizedBox(height: 60.0),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
@@ -180,24 +182,24 @@ class _AvatarHomeScreenState extends State<AvatarHomeScreen> {
                       // Navigate to My Profile screen
                       Navigator.push(context, MaterialPageRoute(builder: (context) => MyProfileScreen()));
                     },
-                    child: Text('My Profile'),
+                    child: const Text('My Profile'),
                   ),
                   ElevatedButton(
                     onPressed: () {
                       // Navigate to Add Profile screen
-                      Navigator.push(context, MaterialPageRoute(builder: (context) => CreateAvatarScreen()));
+                      Navigator.push(context, MaterialPageRoute(builder: (context) => const CreateAvatarScreen()));
                     },
-                    child: Text('Add Profile'),
+                    child: const Text('Add Profile'),
                   ),
                 ],
               ),
-              SizedBox(height: 30.0),
+              const SizedBox(height: 30.0),
               ElevatedButton(
                 onPressed: () {
                   // Navigate to Demo screen
-                  Navigator.push(context, MaterialPageRoute(builder: (context) => DemoScreen()));
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => const DemoScreen()));
                 },
-                child: Text('Demo'),
+                child: const Text('Demo'),
               ),
             ],
           ),
@@ -211,7 +213,7 @@ class _AvatarHomeScreenState extends State<AvatarHomeScreen> {
 class AvatarContainer extends StatelessWidget {
   final String imageUrl;
 
-  AvatarContainer({required this.imageUrl});
+  AvatarContainer({super.key, required this.imageUrl});
 
   @override
   Widget build(BuildContext context) {
@@ -223,7 +225,7 @@ class AvatarContainer extends StatelessWidget {
       ),
       child: imageUrl.isNotEmpty
           ? Image.network(imageUrl, height: 100.0, width: 100.0, fit: BoxFit.cover)
-          :  Placeholder(), // You can customize the placeholder widget
+          :  const Placeholder(), // You can customize the placeholder widget
     );
   }
 }
@@ -243,13 +245,15 @@ class AvatarContainer extends StatelessWidget {
 // }
 
 class AddProfileScreen extends StatelessWidget {
+  const AddProfileScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Add Profile'),
+        title: const Text('Add Profile'),
       ),
-      body: Center(
+      body: const Center(
         child: Text('Add Profile Screen'),
       ),
     );
@@ -257,13 +261,15 @@ class AddProfileScreen extends StatelessWidget {
 }
 
 class DemoScreen extends StatelessWidget {
+  const DemoScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Demo'),
+        title: const Text('Demo'),
       ),
-      body: Center(
+      body: const Center(
         child: Text('Demo Screen'),
       ),
     );
